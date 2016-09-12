@@ -1,2 +1,3 @@
-# git-phaser.github.io
-A landing page for the git-phaser mobile app, visible at gitphaser.com.
+# [gitphaser.com](http://gitphaser.com)
+This is the landing page for the gitphaser app. A jekyll page. 
+
