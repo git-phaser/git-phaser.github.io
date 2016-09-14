@@ -13,9 +13,10 @@ background-image: url('../img/header.jpg');
 
 // --------------------  Top ------------------
 html,
-body { height: 100%; width: 100%;}
-body { @include sans-serif-font;}
-h1, h2, h3, h4, h5, h6 { @include sans-serif-font; }
+body { height: 100%; width: 100%; 
+       font-family: "-apple-system", "Helvetica Neue", "Roboto", "Segoe UI", sans-serif;
+       color: white; 
+}
 
 // --------------------  HR ------------------
 hr {
@@ -31,16 +32,14 @@ hr.divider {
     margin: 40px 0;
 }
 hr.divider-thin{
-    border-color: $theme-primary;
     border-width: 1px;
-    min-width: 100% !important;
-    margin: 20px 0;
+    min-width: 50% !important;
+    margin: 35px auto;
 }
 
 hr.light {
-    border-color: white;
+    border-color: #f0f0f0;
 }
-
 
 // -------------- Links ------------------
 a {
@@ -59,14 +58,14 @@ p {
     line-height: 1.5;
     margin-bottom: 20px;
 }
-
-p.type {}
+p.type { color: #848384; font-weight: 500; }
 p.repo { font-style: italic; font-weight: 500;}
 p.larger{ font-size: 45px !important; }
 
 // -------------- Bkgrnds --------------
 .bg-primary {
     background-color: $theme-primary;
+    color: white;
 }
 
 .bg-dark {
@@ -77,6 +76,10 @@ p.larger{ font-size: 45px !important; }
 
 // -------------- Text/Icons -----------
 .text-faded { color: rgba(white, .7);}
+.italic { font-style: italic; }
+.align-left { text-align: left; }
+.underline { text-decoration: underline;}
+.type { color: #848384; font-weight: 500; }
 .opaque-5{ opacity: .5; }
 .opaque-7{ opacity: .7; }
 
@@ -125,13 +128,20 @@ aside { padding: 50px 0;}
 .center-phone{
    transform: translateX(15%);
 }
-.vcenter{
-   display: flex;
-   flex-direction: column;
-   align-items: center;
-   @media (min-width: 769px) {
-      transform: translateY(25%);
-   }
+
+/* Vertical Centering */
+.vcenter {
+    display: inline-block;
+    vertical-align: middle;
+    float: none;
+}
+
+.no-right{
+    padding-right: 0px;
+}
+
+.no-left{
+    padding-left: 0px;
 }
 
 
@@ -172,19 +182,22 @@ section.call-to-action {
     }
     .jumbotron {
         min-height: 400px;
-        background-image: url(../img/jumbolightstone_m.png);
+        background-color: #cfcfcf;
         background-size: cover;
         padding-top: 30px;
         padding-bottom: 30px;
         margin: 0 !important;
-        color: #333;
+        color: #848384;;
     }
 }
 
 // Tablet
 @media screen and (max-width: 768px) {
     .jumbotron {
-        background-image: url(../img/jumbolightstone_s.png);
+        background-color: #cfcfcf;
+    }
+    p.type {
+        font-size: 18px;
     }
 }
 
@@ -192,8 +205,8 @@ section.call-to-action {
 @media screen and (max-width: 414px) {
     .jumbotron {
         padding: 0px 15px;
-        background-image: url(../img/shard_red_light.jpg);
-        color: #333;
+        background-color: #cfcfcf;
+        color: #848384;
     }
     section { padding: 25px 0; }
     hr.divider { margin: 20px 0; }
@@ -362,7 +375,7 @@ progress::-moz-progress-bar {
 
 .service-box {
 
-    max-width: 400px;
+    //max-width: 400px;
     margin: 50px auto 0;
     @media (min-width: 992px) {
         margin: 20px auto 0;
@@ -374,6 +387,10 @@ progress::-moz-progress-bar {
 
 .service-box.wider {
     margin: 10px auto 0;
+}
+
+.service-box.thinner {
+    max-width: 400px;
 }
 
 // Bootstrap Overrides
