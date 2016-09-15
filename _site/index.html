@@ -167,25 +167,31 @@
       <div class="row text-faded pad-bottom visible-sm">
         <div class="col-sm-1"></div>
         <div class="col-sm-10"> Help test git-phaser for iOS on TestFlight. </div>
-        <div class="col-sm-1"></div>
+        <div class="col-sm-1"></div> 
       </div>
       <div class="row visible-sm">
-          <div class="col-sm-1"></div>
-          <div class="col-sm-10">
+        <div class="col-sm-1"></div>
+        <div class="col-sm-10">
+          <form id="ajax-invite" method="post" class="form-group" action="http://localhost">
             <div class="input-group input-group-lg">
               <span class="input-group-btn">
                 <button class="btn btn-secondary bg-blue" type="button">
                   <i class="fa fa-apple fa-2x apple"></i>
                 </button>
               </span>
-              <input type="text" class="form-control" placeholder="Email">
+              <input id="email-input" type="text" class="form-control" placeholder="Email">
               <span class="input-group-btn">
-                <button class="btn btn-secondary bg-blue" type="button">Get Invite</button>
+                <button id="ajax-button" type="submit" class="btn btn-secondary bg-blue" type="button">
+                  <span id="invite-text"> Get Invite </span>
+                  <i id="success-icon" class="fa fa-check fa-2x apple"></i>
+                  <i id="failure-icon" class="fa fa-remove fa-2x apple"></i>
+                </button>
               </span>
             </div>
-          </div>
-          <div class="col-sm-1"></div>
-      </div>  
+          </form>
+        </div>
+        <div class="col-sm-1"></div>
+      </div>
   </div>
 </div>
 
