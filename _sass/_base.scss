@@ -119,7 +119,7 @@ aside { padding: 50px 0;}
 
 .no-top-xs {
    @media (max-width: 767px) {
-      margin-top: 0px !important;
+      margin-top: 10px !important;
    }  
 }
 
@@ -247,10 +247,18 @@ section.call-to-action {
         background-color: #cfcfcf;
         color: #848384;
     }
+    .jumbotron.jumbo_top{ margin-bottom: 0px; }
     section { padding: 25px 0; }
     hr.divider { margin: 20px 0; }
-    .jumbotron p { font-weight: 500 !important}
+    //.jumbotron p { font-weight: 500 !important}
     p.larger { font-size: 32px !important; }
+    p.header-left { text-align: center; margin: 0 auto; }
+    p.type { font-size: 15px; margin-left: 7px; }
+    .slick-prev:before { display: none; }
+    .slick-next:before { display: none; }
+    .email-text{ font-size: 17px; font-weight: 500; }
+    .vcenter { padding-left: 0px; padding-right: 0px; }
+    .no-gutter{ padding-left: 0px; padding-right: 0px; }
 }
 
 // -------------  Progress ---------------------
