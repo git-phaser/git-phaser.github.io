@@ -21,7 +21,7 @@ body { height: 100%; width: 100%;
 // --------------------  HR ------------------
 hr {
     border-color: $theme-primary;
-    border-width: 3px;
+    border-width: 2px;
     max-width: 50px;
 }
 
@@ -44,7 +44,8 @@ hr.light {
 // -------------- Links ------------------
 a {
     @include transition-all;
-    color: $theme-primary;
+    color: #848384;
+    text-decoration: underline;
     &:hover,
     &:focus {
         color: darken($theme-primary, 10%);
@@ -73,12 +74,18 @@ p.larger{ font-size: 45px !important; }
     color: white;
 }
 
+.bg-blue {
+    background-color: #4396ca;
+    color: rgba(white, .7);
+}
+
 
 // -------------- Text/Icons -----------
 .text-faded { color: rgba(white, .7);}
+.apple { vertical-align: middle; font-size: 28px; }
 .italic { font-style: italic; }
 .align-left { text-align: left; }
-.underline { text-decoration: underline;}
+//.underline { text-decoration: underline;}
 .type { color: #848384; font-weight: 500; }
 .opaque-5{ opacity: .5; }
 .opaque-7{ opacity: .7; }
@@ -99,10 +106,15 @@ p.larger{ font-size: 45px !important; }
 }
 
 // -------------- Layouts --------------
-section { padding: 100px 0; }
+section { padding: 50px 0; }
 aside { padding: 50px 0;}
 
+.header-left{ margin-left: 30px; }
+.pad-bottom{ padding-bottom: 7px;}
 .no-padding { padding: 0; }
+.no-right{ padding-right: 0px;}
+.no-left{ padding-left: 0px;}
+
 .over{ z-index: 10; }
 
 .no-top-xs {
@@ -136,13 +148,7 @@ aside { padding: 50px 0;}
     float: none;
 }
 
-.no-right{
-    padding-right: 0px;
-}
 
-.no-left{
-    padding-left: 0px;
-}
 
 
 // ------------- Sections -------------
@@ -164,6 +170,34 @@ section.call-to-action {
 
 .section-heading {
     margin-top: 0;
+}
+
+// ------------- Screenshots -----------
+.screenshots{
+    background-color: #cfcfcf;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.ss-section{
+    width: 100%;
+    background-color: #cfcfcf;
+}
+
+.ss-title{
+    text-align: center;
+}
+
+.slick-prev {
+    left: -55px;
+}
+
+.slick-next:before {
+    font-size: 50px;
+}
+
+.slick-prev:before {
+    font-size: 50px;
 }
 
 // --------------Jumbotron -------------
