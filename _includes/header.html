@@ -92,17 +92,23 @@
               Help test git-phaser for iOS on TestFlight. 
             </div>
             <div class="row hidden-sm header-left">
+              <form id="ajax-invite" method="post" class="form-group" action="http://localhost">
                 <div class="input-group input-group-lg">
                   <span class="input-group-btn">
                     <button class="btn btn-secondary bg-blue" type="button">
                       <i class="fa fa-apple fa-2x apple"></i>
                     </button>
                   </span>
-                  <input type="text" class="form-control" placeholder="Email">
+                  <input id="email-input" type="text" class="form-control" placeholder="Email">
                   <span class="input-group-btn">
-                    <button class="btn btn-secondary bg-blue" type="button">Get Invite</button>
+                    <button id="ajax-button" type="submit" class="btn btn-secondary bg-blue" type="button">
+                      <span id="invite-text"> Get Invite </span>
+                      <i id="success-icon" class="fa fa-check fa-2x apple"></i>
+                      <i id="failure-icon" class="fa fa-remove fa-2x apple"></i>
+                    </button>
                   </span>
                 </div>
+              </form>
             </div>
         </div><!--
      --><div class="col-lg-6 col-sm-5 col-xs-22 vcenter text-center">

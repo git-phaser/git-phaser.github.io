@@ -172,6 +172,12 @@ section.call-to-action {
 .section-heading {
   margin-top: 0; }
 
+#success-icon {
+  display: none; }
+
+#failure-icon {
+  display: none; }
+
 .screenshots {
   background-color: #cfcfcf;
   width: 80%;

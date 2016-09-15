@@ -45,6 +45,63 @@
     // Initialize WOW.js Scrolling Animations
     new WOW().init();
 
+    // Email invitation
+    var form = $('#ajax-invite');
+    var email = $('#email-input');
+    var button = $('#ajax-button');
+    var invite = $('#invite-text');
+    var success = $('#success-icon');
+    var failure = $('#failure-icon');
+    var successPlaceholder = "Thanks! We'll send you an invitation soon.";
+    var failurePlaceholder = "There was a problem. Try again?";
+
+    // Resets the input when someone types in it.
+    $(email).keydown(function(event){
+        button.removeClass('btn-success');
+        button.removeClass('btn-danger');
+        success.hide();
+        failure.hide();
+        button.addClass('bg-blue');
+        invite.show();
+        email.attr('placeholder', 'Email');
+    })
+
+    // Submits the email address. Handles success and failure.
+    $(form).submit(function(event) {
+        event.preventDefault();
+
+        // Post
+        $.ajax({
+            type: 'POST',
+            url: $(form).attr('action'),
+            data: $(form).serialize()
+        })
+
+        // Success
+        .done(function(res){
+            button.removeClass('bg-blue');
+            button.addClass('btn-success');
+            button.blur();
+            invite.hide();
+            success.show();
+            email.val('');
+            email.attr('placeholder', successPlaceholder);
+        })
+
+        // Failure
+        .fail(function(res){
+            button.removeClass('bg-blue');
+            button.addClass('btn-danger');
+            button.blur();
+            invite.hide();
+            failure.show();
+            email.val('');
+            email.attr('placeholder', failurePlaceholder);
+        });
+    });
+
+
+
     // Slick Slider init
     $(document).ready(function(){
 
