@@ -51,6 +51,7 @@ var debug;
     var email = $('#email');
     var button = $('#ajax-button');
     var invite = $('#invite-text');
+    var spinner = $('#spinner');
     var success = $('#success-icon');
     var failure = $('#failure-icon');
     var successPlaceholder = "Thanks! We'll send you an invitation soon.";
@@ -72,6 +73,9 @@ var debug;
         event.preventDefault();
         var data = JSON.stringify({email: email.val()});
         
+        invite.hide();
+        spinner.css("display","inline-block")
+
         $.ajax({
             type: 'GET',
             url: $(form).attr('action') + '/' + email.val()
@@ -79,10 +83,11 @@ var debug;
 
         // Success
         .done(function(res){
+            
             button.removeClass('bg-blue');
             button.addClass('btn-success');
             button.blur();
-            invite.hide();
+            spinner.hide();
             success.show();
             email.val('');
             email.attr('placeholder', successPlaceholder);
@@ -90,10 +95,12 @@ var debug;
 
         // Failure
         .fail(function(res){
+            
             button.removeClass('bg-blue');
             button.addClass('btn-danger');
             button.blur();
-            invite.hide();
+            spinner.removeClass('fa-spin');
+            spinner.hide();
             failure.show();
             email.val('');
             email.attr('placeholder', failurePlaceholder);

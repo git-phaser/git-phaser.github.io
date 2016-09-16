@@ -178,14 +178,17 @@ section.call-to-action {
 #failure-icon {
   display: none; }
 
+#spinner {
+  display: none; }
+
 .screenshots {
-  background-color: #cfcfcf;
+  background-color: #c4c4c4;
   width: 80%;
   margin: 0 auto; }
 
 .ss-section {
   width: 100%;
-  background-color: #cfcfcf; }
+  background-color: #c4c4c4; }
 
 .ss-title {
   text-align: center; }
@@ -212,7 +215,7 @@ section.call-to-action {
 
   .jumbotron {
     min-height: 400px;
-    background-color: #cfcfcf;
+    background-color: #c4c4c4;
     background-size: cover;
     padding-top: 30px;
     padding-bottom: 30px;
@@ -220,14 +223,14 @@ section.call-to-action {
     color: #848384; } }
 @media screen and (max-width: 768px) {
   .jumbotron {
-    background-color: #cfcfcf; }
+    background-color: #c4c4c4; }
 
   p.type {
     font-size: 18px; } }
 @media screen and (max-width: 414px) {
   .jumbotron {
     padding: 0px 15px;
-    background-color: #cfcfcf;
+    background-color: #c4c4c4;
     color: #848384; }
 
   .jumbotron.jumbo_top {
