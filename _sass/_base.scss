@@ -22,7 +22,7 @@ body { height: 100%; width: 100%;
 hr {
     border-color: $theme-primary;
     border-width: 2px;
-    max-width: 50px;
+    max-width: 0px;
 }
 
 hr.divider {
@@ -194,17 +194,8 @@ section.call-to-action {
     text-align: center;
 }
 
-.slick-prev {
-    left: -55px;
-}
-
-.slick-next:before {
-    font-size: 50px;
-}
-
-.slick-prev:before {
-    font-size: 50px;
-}
+.slick-prev:before { display: none; }
+.slick-next:before { display: none; }
 
 // --------------Jumbotron -------------
 
@@ -222,7 +213,7 @@ section.call-to-action {
     }
     .jumbotron {
         min-height: 400px;
-        background-color: rgb(196, 196, 196);    
+        background-color: #ccc;    
         background-size: cover;
         padding-top: 30px;
         padding-bottom: 30px;
@@ -234,7 +225,7 @@ section.call-to-action {
 // Tablet
 @media screen and (max-width: 768px) {
     .jumbotron {
-        background-color: rgb(196, 196, 196);    
+        background-color: #ccc;    
     }
     p.type {
         font-size: 18px;
@@ -245,7 +236,7 @@ section.call-to-action {
 @media screen and (max-width: 414px) {
     .jumbotron {
         padding: 0px 15px;
-        background-color: rgb(196, 196, 196);    
+        background-color: #ccc;    
         color: #848384;
     }
     .jumbotron.jumbo_top{ margin-bottom: 0px; }
