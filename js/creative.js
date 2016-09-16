@@ -1,3 +1,4 @@
+var debug;
 /*!
  * Start Bootstrap - Creative Bootstrap Theme (http://startbootstrap.com)
  * Code licensed under the Apache License v2.0.
@@ -47,7 +48,7 @@
 
     // Email invitation
     var form = $('#ajax-invite');
-    var email = $('#email-input');
+    var email = $('#email');
     var button = $('#ajax-button');
     var invite = $('#invite-text');
     var success = $('#success-icon');
@@ -69,12 +70,11 @@
     // Submits the email address. Handles success and failure.
     $(form).submit(function(event) {
         event.preventDefault();
-
-        // Post
+        var data = JSON.stringify({email: email.val()});
+        
         $.ajax({
-            type: 'POST',
-            url: $(form).attr('action'),
-            data: $(form).serialize()
+            type: 'GET',
+            url: $(form).attr('action') + '/' + email.val()
         })
 
         // Success
