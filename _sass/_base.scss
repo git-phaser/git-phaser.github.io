@@ -14,7 +14,7 @@ background-image: url('../img/header.jpg');
 // --------------------  Top ------------------
 html,
 body { height: 100%; width: 100%; 
-       font-family: "-apple-system", "Helvetica Neue", "Roboto", "Segoe UI", sans-serif;
+       font-family: "Helvetica Neue", "Roboto", "Segoe UI", sans-serif;
        color: white; 
 }
 
@@ -29,7 +29,7 @@ hr.divider {
     border-color: #eee;
     border-width: 1px;
     min-width: 100% !important;
-    margin: 40px 0;
+    margin: 20px 0;
 }
 hr.divider-thin{
     border-width: 1px;
@@ -59,7 +59,7 @@ p {
     line-height: 1.5;
     margin-bottom: 20px;
 }
-p.type { color: #848384; font-weight: 500; }
+p.type { color: #848384; }
 p.repo { font-style: italic; font-weight: 500;}
 p.larger{ font-size: 45px !important; }
 
@@ -81,12 +81,12 @@ p.larger{ font-size: 45px !important; }
 
 
 // -------------- Text/Icons -----------
-.text-faded { color: rgba(white, .7);}
+.text-faded { color: rgba(white, .9) !important;}
 .apple { vertical-align: middle; font-size: 28px; }
 .italic { font-style: italic; }
 .align-left { text-align: left; }
 //.underline { text-decoration: underline;}
-.type { color: #848384; font-weight: 500; }
+.type { color: #848384; font-weight: 350; }
 .opaque-5{ opacity: .5; }
 .opaque-7{ opacity: .7; }
 
@@ -194,11 +194,16 @@ section.call-to-action {
     text-align: center;
 }
 
+.slick-active:focus { outline: 0}
 .slick-prev:before { display: none; }
 .slick-next:before { display: none; }
 
+
 // --------------Jumbotron -------------
 
+.jumbotron {
+    background: linear-gradient(to left, #b4b4b4, #dadada);
+}
 // Desktop
 @media screen and (min-width: 768px){
     .jumbo_top {
@@ -213,7 +218,7 @@ section.call-to-action {
     }
     .jumbotron {
         min-height: 400px;
-        background-color: #ccc;    
+            
         background-size: cover;
         padding-top: 30px;
         padding-bottom: 30px;
@@ -224,25 +229,19 @@ section.call-to-action {
 
 // Tablet
 @media screen and (max-width: 768px) {
-    .jumbotron {
-        background-color: #ccc;    
-    }
-    p.type {
-        font-size: 18px;
-    }
+    p.type { font-size: 18px;}
 }
 
 // Phones
 @media screen and (max-width: 414px) {
     .jumbotron {
-        padding: 0px 15px;
-        background-color: #ccc;    
+        padding: 0px 15px;   
         color: #848384;
     }
     .jumbotron.jumbo_top{ margin-bottom: 0px; }
     section { padding: 25px 0; }
     hr.divider { margin: 20px 0; }
-    //.jumbotron p { font-weight: 500 !important}
+
     p.larger { font-size: 32px !important; }
     p.header-left { text-align: center; margin: 0 auto; }
     p.type { font-size: 15px; margin-left: 7px; }
