@@ -38,6 +38,8 @@
 $theme-primary: #cfcfcf;
 $theme-dark: #777;
 
+@import url(https://fonts.googleapis.com/css?family=Varela+Round);
+
 // Import partials from `sass_dir` (defaults to `_sass`)
 @import
         "mixins",
