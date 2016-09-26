@@ -121,13 +121,14 @@ aside { padding: 50px 0;}
 .header-left{ margin-left: 30px; }
 .pad-bottom{ padding-bottom: 7px;}
 .pad-top-25{ padding-top: 25px; }
+.pad-left{ padding-left: 20px;}
 .no-padding { padding: 0; }
 .no-right{ padding-right: 0px;}
 .no-left{ padding-left: 0px;}
 .white-container { padding: 0; background-color: white; }
 .over{ z-index: 10; }
 .max-image{
-    max-height: 650px;
+    max-height: 700px;
 }
 
 .no-top-xs {
@@ -158,7 +159,7 @@ aside { padding: 50px 0;}
 .vcenter {
     display: inline-block;
     vertical-align: middle;
-    //float: none;
+    float: none;
 }
 
 
@@ -431,7 +432,7 @@ progress::-moz-progress-bar {
 .service-box {
 
     //max-width: 400px;
-    margin: 50px auto 0;
+    margin: 25px auto 0;
     @media (min-width: 992px) {
         margin: 20px auto 0;
     }
