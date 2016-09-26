@@ -117,7 +117,7 @@ var debug;
             arrows: true,
             infinite: false,
             speed: 300,
-            slidesToShow: 3,
+            slidesToShow: 2,
             slidesToScroll: 1,
             responsive: [
                 {

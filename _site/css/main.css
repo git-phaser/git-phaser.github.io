@@ -1,4 +1,5 @@
 @import url(https://fonts.googleapis.com/css?family=Varela+Round);
+@import url(https://fonts.googleapis.com/css?family=Raleway);
 /*
 Things to remember how to do:
 
@@ -15,8 +16,12 @@ html,
 body {
   height: 100%;
   width: 100%;
-  font-family: 'Varela Round', sans-serif;
+  font-family: "Helvetica Neue", "Roboto", "Segoe UI", sans-serif;
+  font-family: 'Raleway', sans-serif;
   color: white; }
+
+.img-responsive {
+  display: inline; }
 
 hr {
   border-color: #cfcfcf;
@@ -47,7 +52,7 @@ a {
     color: #b6b6b6; }
 
 p {
-  font-size: 16px;
+  font-size: 20px;
   line-height: 1.5;
   margin-bottom: 20px; }
 
@@ -74,6 +79,9 @@ p.larger {
   color: rgba(255, 255, 255, 0.7); }
 
 .text-faded {
+  color: rgba(255, 255, 255, 0.7) !important; }
+
+.text-white {
   color: rgba(255, 255, 255, 0.9) !important; }
 
 .apple {
@@ -102,6 +110,9 @@ p.larger {
 .red-icon {
   color: #d9534f;
   opacity: .7; }
+
+.email-text {
+  font-size: 21px; }
 
 .github-text {
   vertical-align: super !important;
@@ -147,7 +158,7 @@ aside {
   z-index: 10; }
 
 .max-image {
-  max-height: 700px; }
+  max-height: 650px; }
 
 @media (max-width: 767px) {
   .no-top-xs {
@@ -171,8 +182,7 @@ aside {
 /* Vertical Centering */
 .vcenter {
   display: inline-block;
-  vertical-align: middle;
-  float: none; }
+  vertical-align: middle; }
 
 .call-to-action {
   color: #5d5b55 !important;
@@ -199,8 +209,7 @@ section.call-to-action {
   display: none; }
 
 .screenshots {
-  background-color: #c4c4c4;
-  width: 80%;
+  background-color: transparent;
   margin: 0 auto; }
 
 .ss-section {
@@ -220,7 +229,7 @@ section.call-to-action {
   display: none; }
 
 .jumbotron {
-  background: linear-gradient(to left, #b4b4b4, #dadada); }
+  background: linear-gradient(to left, #dadada, #b4b4b4); }
 
 @media screen and (min-width: 768px) {
   .jumbo_top {
@@ -519,7 +528,8 @@ body {
   border-left-width: 1px;
   border-radius: 50px;
   margin: 10px auto;
-  font-family: 'Open Sans', sans-serif; }
+  font-family: 'Open Sans', sans-serif;
+  font-size: 20px; }
 
 .danger {
   border-left-color: white;

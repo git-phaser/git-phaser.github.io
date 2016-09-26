@@ -1,24 +1,132 @@
-  <section class="ss-section">
-    <div class="screenshots">
-        <div> 
-          <h2 class="text-faded text-center"> Find users. <h2>
-          <img src="../img/list_p.png" class="img-responsive"/> 
+<section class="ss-section">
+  <div class="row">
+    <div class="col-lg-3 col-md-3 col-sm-1 col-xs-0"></div>
+    <div class="col-lg-6 col-md-7 col-sm-10 col-xs-12">
+        <h2 class="text-faded text-center"> Features </h2>
+        <div class="service-box no-top-xs">      
+          <div class="row oaerror warning" >
+              <span class="col col-lg-2 col-md-2 col-sm-2 col-xs-1 text-faded no-left no-right vcenter text-center"> 
+                <strong> <i class="fa fa-commenting fa-2x"></i> </strong>
+              </span><!--
+            --><span class="col col-lg-10 col-md-10 col-sm-10 col-xs-11  no-left text-faded vcenter"> 
+                <p class="type"> Good for meetups and conferences. </p> 
+              </span>
+          </div>
+          
+          <div class="row oaerror warning" >
+              <span class="col col-lg-2 col-md-2 col-sm-2 col-xs-1 text-faded no-left no-right vcenter text-center"> 
+                <strong> <i class="fa fa-user fa-2x"></i> </strong>
+              </span><!--
+            --><span class="col col-lg-10 col-md-10 col-sm-10 col-xs-11 no-left text-faded vcenter"> 
+                 <p class="type"> Have a history of people you've met. </p> 
+              </span>
+          </div>
+          
+          <div class="row oaerror warning" >
+              <span class="col col-lg-2 col-md-2 col-sm-2 col-xs-1 text-faded no-left no-right vcenter text-center"> 
+                <strong> <i class="fa fa-bars fa-2x"></i> </strong>
+              </span><!--
+            --><span class="col col-lg-10 col-md-10 col-sm-10 col-xs-11 no-left text-faded vcenter"> 
+                <p class="type"> Add them to your device contacts. </p> 
+              </span>
+          </div>
+          
+          <div class="row oaerror warning" >
+              <span class="col col-lg-2 col-md-2 col-sm-2 col-xs-1 no-left no-right text-faded col-wider text-center vcenter"> 
+                <strong> <i class="fa fa-eye fa-2x"></i> </strong>
+              </span><!--
+            --><span class="col col-lg-10 col-md-10 col-sm-10 col-xs-11  no-left text-faded vcenter"> 
+                <p class="type"> Finds users even if their app is closed. </p> 
+              </span>
+          </div>
+           
+          <div class="row oaerror warning" >
+              <span class="col col-lg-2 col-md-2 col-sm-2 col-xs-1 no-left no-right text-faded col-wider text-center vcenter"> 
+                <strong> <i class="fa fa-github fa-2x"></i> </strong>
+              </span><!--
+            --><span class="col col-lg-10 col-md-10 col-sm-10 col-xs-11  no-left text-faded vcenter"> 
+                <p class="type"> Free and 
+                  <a href="https://github.com/git-phaser/git-phaser" target="_blank"> open source. </a> 
+                </p> 
+              </span>
+          </div>
+
+          <div class="row oaerror danger" >
+              <span class="col col-lg-2 col-md-2 col-sm-2 col-xs-1 no-left no-right text-faded col-wider text-center vcenter"> 
+                <span class="fa-stack">
+                  <i class="fa fa-map-marker fa-1x white-icon"></i>
+                  <i class="fa fa-ban fa-stack-2x red-icon"></i>
+                </span>
+              </span><!--
+            --><span class="col col-lg-10 col-md-10 col-sm-10 col-xs-11  no-left text-faded vcenter"> 
+                <p class="type"> <span class="underline">Does not</span>  track by location. </p> 
+              </span>
+          </div>
+      
+          <div class="row oaerror danger" >
+              <span class="col col-lg-2 col-md-2 col-sm-2 col-xs-1 no-left no-right text-faded col-wider text-center vcenter"> 
+                <span class="fa-stack">
+                  <i class="fa fa-battery-half fa-1x white-icon"></i>
+                  <i class="fa fa-ban fa-stack-2x red-icon"></i> 
+                </span>
+              </span><!--
+            --><span class="col col-lg-10 col-md-10 col-sm-10 col-xs-11  no-left text-faded vcenter"> 
+                <p class="type"> <span class="underline">Does not</span>  drain your battery. </p> 
+              </span>
+          </div>
         </div>
-        <div> 
-          <h2 class="text-faded text-center"> See profiles. <h2>
-          <img src="../img/profile_p.png" class="img-responsive"/> 
+        <hr>
+        <div class="row text-faded email-text pad-bottom hidden-xs">
+           Test git-phaser for iOS on TestFlight. 
         </div>
-        <div> 
-          <h2 class="text-faded text-center"> View location. <h2>
-          <img src="../img/map_p.png" class="img-responsive"/> 
+        <div class="row hidden-xs">
+          <form id="ajax-invite" method="post" class="form-group" action="https://www.cyclop.se/gitphaser">
+            <div class="input-group input-group-lg">
+              <span class="input-group-btn">
+                <button class="btn btn-secondary bg-blue" type="button">
+                  <i class="fa fa-apple fa-2x apple"></i>
+                </button>
+              </span>
+              <input id="email" type="email" class="form-control" placeholder="Email">
+              <span class="input-group-btn">
+                <button id="ajax-button" type="submit" class="btn btn-secondary bg-blue" type="button">
+                  <span id="invite-text"> Get Invite </span>
+                  <span><i id="spinner" class="fa fa-circle-o-notch fa-spin text-faded fa-2x apple"></i></span>
+                  <i id="success-icon" class="fa fa-check fa-2x apple"></i>
+                  <i id="failure-icon" class="fa fa-remove fa-2x apple"></i>
+                </button>
+              </span>
+            </div>
+          </form>
         </div>
-        <div> 
-          <h2 class="text-faded text-center"> Add contacts. <h2>
-          <img src="../img/contacts_p.png" class="img-responsive"/> 
+        <!-- Phone TestFlight Invitation -->
+        <div class="row text-faded pad-bottom visible-xs tablet-invite-row">
+          <div class="col-xs-1"></div>
+          <div class="col-xs-10 email-text"> 
+            <span> Test git-phaser for iOS on TestFlight. </span> 
+          </div>
+          <div class="col-xs-1"></div>
         </div>
-        <div> 
-          <h2 class="text-faded text-center"> Get notifications. <h2>
-          <img src="../img/notification_p.png" class="img-responsive"/> 
+        <div class="row visible-xs">
+          <div class="col-xs-1"></div>
+          <div class="col-xs-10">
+            <form id="ajax-invite" method="post" class="form-group" action="https://www.cyclop.se/gitphaser">
+              <div class="input-group input-group-lg">
+                <input id="email" type="email" class="form-control" placeholder="Email">
+                <span class="input-group-btn">
+                  <button id="ajax-button" type="submit" class="btn btn-secondary bg-blue" type="button">
+                    <i id="invite-text" class="fa fa-send fa-2x apple visible-xs"></i>
+                    <span><i id="spinner" class="fa fa-circle-o-notch fa-spin text-faded fa-2x apple"></i></span>
+                    <i id="success-icon" class="fa fa-check fa-2x apple"></i>
+                    <i id="failure-icon" class="fa fa-remove fa-2x apple"></i>
+                  </button>
+                </span>
+              </div>
+            </form>
+          </div>
+          <div class="col-xs-1"></div>
         </div>
-    </div>
-  </section>
+      </div>
+    <div class="col-lg-3 col-md-3 col-sm-1 col-xs-0"></div>
+  </div>
+</div>
