@@ -203,6 +203,8 @@ section.call-to-action {
 //.ss-width {max-width: 291px;}
 .ss-section{
     width: 100%;
+    //background-image: url(../img/graph.png);
+    //background-repeat: repeat;
     background-color: rgb(196, 196, 196);
 }
 
@@ -245,7 +247,7 @@ section.call-to-action {
 
 // Tablet
 @media screen and (max-width: 768px) {
-    p.type { font-size: 15px;}
+    p.type { font-size: 25px;}
     .pad-top-25{ padding-top: 0px}
     .tablet-invite-row{ padding-top: 15px;}
 }
@@ -534,7 +536,7 @@ body {
 
 .danger {
   border-left-color: white; /* Left side border color */
-  background-color: rgba(217, 83, 79, 0.1); /* Same color as the left border with reduced alpha to 0.1 */
+  background-color: rgba(217, 83, 79, 0.4); /* Same color as the left border with reduced alpha to 0.1 */
 }
 
 .danger strong {
@@ -543,16 +545,16 @@ body {
 
 .warning {
   border-left-color: white;
-  background-color: rgba(154,154,154, .2);
+  background-color: rgba(154,154,154, .7);
 }
 
 .warning strong {
-  color: #9e9e9e;
+  color: white;
 }
 
 .info {
   border-left-color: #5bc0de;
-  background-color: rgba(91, 192, 222, 0.1);
+  background-color: rgba(91, 192, 222, 0.7);
 }
 
 .info strong {
